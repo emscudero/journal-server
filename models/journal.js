@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
 
     const Journal = sequelize.define('journal', {
     title: {
@@ -15,8 +15,9 @@ module.exports = function (sequelize, DataTypes) {
         },
         owner:{
             type: DataTypes.INTEGER,
+            allowNull: false,
         }
-    });
+    })
 
 return Journal;
 };
